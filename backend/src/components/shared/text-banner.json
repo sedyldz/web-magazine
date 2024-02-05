@@ -1,0 +1,74 @@
+{
+  "collectionName": "components_shared_text_banners",
+  "info": {
+    "displayName": "Text Banner",
+    "icon": "expand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "right",
+        "left",
+        "center",
+        "green",
+        "video"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black"
+      ],
+      "default": "white"
+    },
+    "link": {
+      "type": "string"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "source": {
+      "type": "text"
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "black",
+        "green"
+      ]
+    }
+  }
+}

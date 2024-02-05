@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_shared_newsletters",
+  "info": {
+    "displayName": "newsletter",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {}
+}

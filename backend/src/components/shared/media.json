@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_media",
+  "info": {
+    "displayName": "Media",
+    "icon": "file-video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "image-small",
+        "image-medium",
+        "image-large",
+        "image-full",
+        "image-double",
+        "video"
+      ]
+    }
+  }
+}

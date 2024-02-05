@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Create your blog content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "articles"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider",
+        "shared.text-banner"
+      ]
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::issue.issue",
+      "inversedBy": "articles"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "black",
+        "green"
+      ],
+      "default": "white"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "white",
+        "green"
+      ],
+      "default": "black"
+    }
+  }
+}
